@@ -1,50 +1,73 @@
-# React + TypeScript + Vite
+<h1 style="margin-top: 1em; text-align: center; margin-bottom: 3em;">
+  <p> <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" alt="Waving Hand" width="25px" height="25px">Welcome to the Skill-UP-Africa #Hack4PWD Project! </p>
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This Readme provides comprehensive information about the frontend repo.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Project Description
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+The website is built using the following tech stack:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **React**: JavaScript library for building user interfaces.
+- **Vite**: build tool that aims to provide a faster and leaner development experience for modern web projects.
+- **Tailwind CSS**: utility-first CSS framework for rapidly building custom user interfaces.
+- **GitHub**: platform for version control and collaboration.
+- **Figma**: web-based vector graphics editor and prototyping tool.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Figma Design Reference: [Figma Design](https://www.figma.com/design/uuteWJTAgFY8d3ZO3ZUAsW/SkillUP-Africa?node-id=0-1&node-type=canvas&t=BPny5E650xPtHPIh-0)
+
+## Project Set Up
+
+### Prerequisites
+
+- `npm` and `pnpm` should be installed.
+- `git` should be installed (recommended v2.4.11 or higher)
+
+Follow these steps to get the project up and running on your local machine:
+
+1. **Clone the repository**
+
+   Open your terminal and run the following command:
+
+   ```bash
+   git clone https://github.com/SkillUP-Africa-PWD-Org/frontend
+   ```
+
+2. **Navigate into the directory**
+
+   Change your current directory to the project's directory:
+
+   ```bash
+   cd frontend
+   ```
+
+3. **Install the dependencies**
+
+   Run the following command:
+
+   ```bash
+   npm install
+   ```
+   or
+   ```bash
+   pnpm i
+   ```
+
+5. **Start the development server**
+
+   Now you can start the development server and begin developing:
+
+   ```bash
+   npm run dev
+   ```
+   or
+   ```bash
+   pnpm dev
+   ```
+
+   The project should now be running at http://localhost:5173 (or another port if 5173 is already in use).
