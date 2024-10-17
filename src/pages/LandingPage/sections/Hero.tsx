@@ -1,4 +1,4 @@
-import { LandingHero, Hero1 } from "../../../assets/Images";
+import { HeroBackground, Hero1 } from "../../../assets/Images";
 import learnIcon from "../../../assets/Icons/learn-icon.svg";
 import careerIcon from "../../../assets/Icons/career-icon.svg";
 import certificateIcon from "../../../assets/Icons/certificate-icon.svg";
@@ -8,7 +8,7 @@ const Hero = () => {
     <div>
       <div
         style={{
-          backgroundImage: `url(${LandingHero})`,
+          backgroundImage: `url(${HeroBackground})`,
         }}
       >
         <img
