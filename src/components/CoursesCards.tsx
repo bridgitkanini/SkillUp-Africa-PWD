@@ -14,7 +14,7 @@ const CoursesCards = () => {
   const CoursesData = [
     {
       id: 1,
-      title: "Title",
+      title: "Electrical Works",
       subtitle: "Subtitle",
       description: "Description",
       duration: "Duration",
@@ -25,7 +25,7 @@ const CoursesCards = () => {
     },
     {
       id: 2,
-      title: "Title",
+      title: "Jewelry Making",
       subtitle: "Subtitle",
       description: "Description",
       duration: "Duration",
@@ -36,7 +36,7 @@ const CoursesCards = () => {
     },
     {
       id: 3,
-      title: "Title",
+      title: "Mechanics",
       subtitle: "Subtitle",
       description: "Description",
       duration: "Duration",
@@ -47,7 +47,7 @@ const CoursesCards = () => {
     },
     {
       id: 4,
-      title: "Title",
+      title: "Pottery",
       subtitle: "Subtitle",
       description: "Description",
       duration: "Duration",
@@ -58,7 +58,7 @@ const CoursesCards = () => {
     },
     {
       id: 5,
-      title: "Title",
+      title: "Plumbing",
       subtitle: "Subtitle",
       description: "Description",
       duration: "Duration",
@@ -69,7 +69,7 @@ const CoursesCards = () => {
     },
     {
       id: 6,
-      title: "Title",
+      title: "Tailoring",
       subtitle: "Subtitle",
       description: "Description",
       duration: "Duration",

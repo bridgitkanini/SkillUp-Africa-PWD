@@ -1,56 +1,55 @@
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import { NavLink } from "react-router-dom";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
+import lessonsData from "./LessonsData";
 
 const Content = () => {
   const [activeTab, setActiveTab] = useState("#electrical-works");
-  const [isExpanded, setIsExpanded] = useState(false);
+  const [expandedLessons, setExpandedLessons] = useState({});
 
-  const contentData: { [key: string]: string } = {
-    "#electrical-works": "This is content for Electrical Works.",
-    "#jewelry-making": "This is content for Jewelry Making.",
-    "#mechanics": "This is content for Mechanics.",
-    "#plumbing": "This is content for Plumbing.",
-    "#pottery": "This is content for Pottery.",
-    "#tailoring": "This is content for Tailoring.",
-  };
-
-  const handleTabClick = (
-    tabId:
-      | "#electrical-works"
-      | "#jewelry-making"
-      | "#mechanics"
-      | "#plumbing"
-      | "#pottery"
-      | "#tailoring"
-  ) => {
+  const handleTabClick = (tabId: SetStateAction<string>) => {
     setActiveTab(tabId);
-    setIsExpanded(false);
+    setExpandedLessons({}); // Collapse all lessons on tab change
   };
 
-  // Function to toggle content visibility
-  const toggleContent = () => {
-    setIsExpanded((prev) => !prev);
+  // Function to toggle content visibility for a specific lesson
+  const toggleContent = (lessonId: number) => {
+    setExpandedLessons((prev) => ({
+      ...prev,
+      [lessonId]: !prev[lessonId], // Toggle the specific lesson
+    }));
   };
+
+  // Find the active lessons data based on the active tab
+  const activeLessonsData = lessonsData.find(
+    (lesson) => lesson.id === activeTab
+  );
 
   return (
     <div className="max-w-[1000px] flex flex-row m-40 p-20 bg-[#FDF8EE]">
       <NavigationTabs activeTab={activeTab} handleTabClick={handleTabClick} />
       <div className="h-fit border-l border-primary/50 md:w-[600px]">
         <div className="flex-grow pl-8">
-          <h3 className="flex items-center">
-            Lesson{" "}
-            <button onClick={toggleContent} className="ml-2">
-              {isExpanded ? <RemoveIcon /> : <AddIcon />}
-            </button>
-          </h3>
-          {isExpanded && (
-            <div className="mt-4">
-              {/* Dynamically render content based on the active tab */}
-              {contentData[activeTab]}
-            </div>
-          )}
+          {activeLessonsData &&
+            activeLessonsData.lessons.map((lesson) => (
+              <div key={lesson.id} className="mb-4">
+                <h3 className="flex items-center justify-between bg-primary text-white p-4 rounded-lg">
+                  Lesson {lesson.id}
+                  <button
+                    onClick={() => toggleContent(lesson.id)}
+                    className="ml-2"
+                  >
+                    {expandedLessons[lesson.id] ? <RemoveIcon /> : <AddIcon />}
+                  </button>
+                </h3>
+                {expandedLessons[lesson.id] && (
+                  <div className="mt-4">
+                    <p>{lesson.content}</p>
+                  </div>
+                )}
+              </div>
+            ))}
         </div>
       </div>
     </div>
