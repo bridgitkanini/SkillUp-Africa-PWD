@@ -1,9 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
-import {
-  HomePage,
-  LandingPage,
-  Layout,
-} from "../pages";
+import { HomePage, LandingPage, CoursePage, Layout } from "../pages";
 
 const router = createBrowserRouter([
   {
@@ -16,8 +12,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/home",
-        element: < HomePage />,
+        element: <HomePage />,
       },
+      { 
+        path: "/courses/:id", 
+        element: <CoursePage /> },
     ],
   },
 ]);

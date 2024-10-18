@@ -8,6 +8,7 @@ import {
   pottery,
   tailoring,
 } from "../assets/Images";
+import { Link } from "react-router-dom";
 
 const CoursesCards = () => {
   const CoursesData = [
@@ -84,7 +85,7 @@ const CoursesCards = () => {
       {CoursesData.map((course) => (
         <div
           key={course.id}
-          className="max-w-80 border border-dark-50 rounded-2xl p-4"
+          className="max-w-80 rounded-2xl p-4"
           style={{
             backgroundColor: course.backgroundColor,
             color: course.textColor,
@@ -111,6 +112,12 @@ const CoursesCards = () => {
                 {course.lessons} Lessons
               </span>
             </div>
+            <Link
+              to={`/courses/${course.id}`}
+              className="flex self-center py-2 px-4 -mb-8 bg-primary rounded-full text-white "
+            >
+              Join Course
+            </Link>
           </div>
         </div>
       ))}
