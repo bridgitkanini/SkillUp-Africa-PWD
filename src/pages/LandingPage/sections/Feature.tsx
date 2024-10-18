@@ -1,5 +1,5 @@
 import { WomanOnDesk } from "../../../assets/Images";
-import { LandingHero } from "../../../assets/Images";
+import { HeroBackground } from "../../../assets/Images";
 import featureIcon1 from "../../../assets/Icons/feature-icon1.svg";
 import featureIcon2 from "../../../assets/Icons/feature-icon2.svg";
 
@@ -7,7 +7,7 @@ const Feature = () => {
   return (
     <div
       style={{
-        backgroundImage: `url(${LandingHero})`,
+        backgroundImage: `url(${HeroBackground})`,
       }}
       className="py-5"
     >
