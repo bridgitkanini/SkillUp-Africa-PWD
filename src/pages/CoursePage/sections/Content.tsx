@@ -81,7 +81,7 @@ const NavigationTabs = ({ activeTab, handleTabClick }: NavigationTabsProps) => {
     { name: "Plumbing", id: "#plumbing" },
     { name: "Pottery", id: "#pottery" },
     { name: "Tailoring", id: "#tailoring" },
-  ];
+  ] as const;
 
   return (
     <div className="flex flex-col gap-4">
@@ -92,8 +92,8 @@ const NavigationTabs = ({ activeTab, handleTabClick }: NavigationTabsProps) => {
           onClick={() => handleTabClick(tab.id)}
           className={
             activeTab === tab.id
-              ? "flex h-10 cursor-pointer items-center text-xl rounded-full w-fit bg-primary text-white  font-semibold px-8 py-5 mx-4 transition-all ease-in"
-              : "flex h-10 cursor-pointer items-center text-xl border border-primary rounded-full px-8 py-5 mx-4 transition-all ease-in"
+              ? "flex h-10 cursor-pointer items-center text-xl rounded-full bg-secondary text-white font-semibold px-8 py-5 mx-4 transition-all ease-in"
+              : "flex h-10 cursor-pointer items-center text-xl bg-white rounded-full px-8 py-5 mx-4 transition-all ease-in"
           }
         >
           {tab.name}

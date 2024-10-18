@@ -7,7 +7,7 @@ const Hero = () => {
         backgroundImage: `url(${HeroBackground})`,
         maxWidth: "",
       }}
-      className="py-5 flex flex-col md:flex-row items-center justify-center gap-4"
+      className="py-5 flex flex-col md:flex-row items-center justify-center gap-4 w-full"
     >
       <div className="flex flex-col gap-8">
         <h1 className="text-5xl font-bold text-black">

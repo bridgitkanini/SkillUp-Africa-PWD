@@ -21,6 +21,12 @@ function Navbar() {
         {pathname === "/" ? (
           <div className="flex flex-row gap-8">
             <Link
+              to={"/home"}
+              className="bg-primary text-white px-6 py-3 text-base font-semibold rounded-full hidden md:flex"
+            >
+              Home
+            </Link>
+            <Link
               to={"/"}
               className="bg-primary text-white px-6 py-3 text-base font-semibold rounded-full hidden md:flex"
             >
