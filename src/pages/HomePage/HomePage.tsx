@@ -1,3 +1,4 @@
+import CheckOutCard from "../../components/CheckOutCard";
 import Courses from "./sections/Courses";
 import Hero from "./sections/Hero";
 
@@ -6,6 +7,7 @@ const HomePage = () => {
     <div className="bg-[#4DCDCB] overflow-hidden">
       <Hero />
       <Courses />
+      <CheckOutCard />
     </div>
   );
 };

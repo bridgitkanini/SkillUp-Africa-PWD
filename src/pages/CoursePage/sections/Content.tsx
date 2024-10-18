@@ -35,9 +35,9 @@ const Content = () => {
   };
 
   return (
-    <div className="w-full flex flex-row my-8 mx-20 p-20 bg-[#FDF8EE]">
+    <div className="max-w-[1000px] flex flex-row m-40 p-20 bg-[#FDF8EE]">
       <NavigationTabs activeTab={activeTab} handleTabClick={handleTabClick} />
-      <div className="h-fit border-l border-primary/50 w-4/5">
+      <div className="h-fit border-l border-primary/50 md:w-[600px]">
         <div className="flex-grow pl-8">
           <h3 className="flex items-center">
             Lesson{" "}
@@ -84,7 +84,7 @@ const NavigationTabs = ({ activeTab, handleTabClick }: NavigationTabsProps) => {
   ];
 
   return (
-    <div className="flex flex-col gap-4 w-1/5">
+    <div className="flex flex-col gap-4">
       {tabs.map((tab) => (
         <NavLink
           key={tab.id}
@@ -92,8 +92,8 @@ const NavigationTabs = ({ activeTab, handleTabClick }: NavigationTabsProps) => {
           onClick={() => handleTabClick(tab.id)}
           className={
             activeTab === tab.id
-              ? "flex h-10 cursor-pointer items-center text-xl rounded-full bg-primary text-white  font-semibold mx-8 px-8 py-5 transition-all ease-in"
-              : "flex h-10 cursor-pointer items-center text-xl border border-primary rounded-full px-8 py-5 mx-8 transition-all ease-in"
+              ? "flex h-10 cursor-pointer items-center text-xl rounded-full w-fit bg-primary text-white  font-semibold px-8 py-5 mx-4 transition-all ease-in"
+              : "flex h-10 cursor-pointer items-center text-xl border border-primary rounded-full px-8 py-5 mx-4 transition-all ease-in"
           }
         >
           {tab.name}
