@@ -26,13 +26,13 @@ function Navbar() {
               to={"/"}
               className="bg-primary text-white px-6 py-3 text-base font-semibold rounded-full hidden md:flex"
             >
-              Login
+              Sign up
             </Link>
             <Link
               to={"/"}
               className="bg-primary text-white px-6 py-3 text-base font-semibold rounded-full hidden md:flex"
             >
-              Sign up
+              Log in
             </Link>
           </div>
         ) : (
