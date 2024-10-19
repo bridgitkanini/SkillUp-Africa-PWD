@@ -1,66 +1,30 @@
 import { HeroBackground, Hero1 } from "../../../assets/Images";
-import learnIcon from "../../../assets/Icons/learn-icon.svg";
-import careerIcon from "../../../assets/Icons/career-icon.svg";
-import certificateIcon from "../../../assets/Icons/certificate-icon.svg";
 
 const Hero = () => {
   return (
-    <div>
-      <div
-        style={{
-          backgroundImage: `url(${HeroBackground})`,
-        }}
-      >
+    <div
+      className="relative"
+      style={{
+        backgroundImage: `url(${HeroBackground})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "100vh", // Ensure the background image covers the full height
+      }}
+    >
+      <div className="flex flex-col md:flex-row items-center justify-center gap-4  bg-secondary rounded-2xl max-w-[1000px] m-auto p-20 relative z-10">
         <img
           src={Hero1}
           alt="carousel-image1"
-          className="object-cover p-10 pb-36"
+          className="object-cover p-10 min-h-80 rounded-2xl"
         />
-      </div>
-      <div className="flex flex-col md:flex-row gap-4 p-16 m-20 -mt-28 bg-primary rounded-2xl text-white">
-        <div className="flex flex-row items-center justify-center gap-4">
-          <img
-            src={learnIcon}
-            alt="learn-icon"
-            className="w-16 h-16 p-4 bg-white/30 rounded-xl"
-          />
-          <div className="flex flex-col gap-2">
-            <h2 className="text-2xl font-semibold">Learn The Latest Skills</h2>
-            <p className="font-extralight">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry that is 2000 years old.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex flex-row items-center justify-center gap-4">
-          <img
-            src={careerIcon}
-            alt="career-icon"
-            className="w-16 h-16 p-4 bg-white/30 rounded-xl"
-          />
-          <div className="flex flex-col gap-2">
-            <h2 className="text-2xl font-semibold">Advance Your Career</h2>
-            <p className="font-extralight">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry that is 2000 years old.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex flex-row items-center justify-center gap-4">
-          <img
-            src={certificateIcon}
-            alt="certificate-icon"
-            className="w-16 h-16 p-4 bg-white/30 rounded-xl"
-          />
-          <div className="flex flex-col gap-2">
-            <h2 className="text-2xl font-semibold">Earn Certificates</h2>
-            <p className="font-extralight">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry that is 2000 years old.
-            </p>
-          </div>
+        <div className="text-white flex flex-col gap-4 p-10">
+          <h3 className="text-5xl font-bold">Data Points</h3>
+          <p className="w-80" >
+            According to the Kenya National Bureau of Statistics (K.N.B.S), the
+            2019 census indicated that 2.2% of Kenya’s population lives with
+            some form of disability. This translates to over 900,000
+            individuals.
+          </p>
         </div>
       </div>
     </div>
