@@ -6,7 +6,7 @@ import lessonsData from "./LessonsData";
 
 const Content = () => {
   const [activeTab, setActiveTab] = useState("#electrical-works");
-  const [expandedLessons, setExpandedLessons] = useState({});
+  const [expandedLessons, setExpandedLessons] = useState<{ [key: number]: boolean }>({});
 
   const handleTabClick = (tabId: SetStateAction<string>) => {
     setActiveTab(tabId);
