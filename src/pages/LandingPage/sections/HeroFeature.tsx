@@ -30,9 +30,8 @@ const HeroFeature = () => {
           <div className="flex flex-col gap-2">
             <h2 className="text-2xl font-semibold">Advance Your Career</h2>
             <p className="font-extralight">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry that is 2000 years old.
-            </p>
+              Our platform offers valuable skills like plumbing, mechanical works, electrical works and many others to help PWDs excel in their careers. 
+              </p>
           </div>
         </div>
 
