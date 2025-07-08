@@ -1,9 +1,9 @@
-import { WomanOnWheelchair } from "../../../assets/Images";
+import { ProblemStatement } from "../../../assets/Images";
 
 const Data = () => {
   return (
     <div className="flex flex-col md:flex-row items-center justify-center gap-4 m-10">
-      <img src={WomanOnWheelchair} alt="woman on wheelchair" />
+      <img src={ProblemStatement} alt="problem-statement image" />
       <div className="flex flex-col gap-8">
         <h1 className="text-7xl font-bold text-white">
           Problem <span className="text-primary">Statement</span>
