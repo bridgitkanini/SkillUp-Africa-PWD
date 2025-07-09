@@ -27,21 +27,26 @@ const Testimonials = () => {
   const containerRef = useRef(null);
   return (
     <div className="flex flex-col gap-4 items-center justify-center py-20">
-      <header className="text-7xl font-bold text-primary">
+      <header className="text-7xl font-bold text-gray-800">
         What Students Say
       </header>
       <div className="w-full overflow-x-hidden mt-8" style={{ maxWidth: 1200 }}>
         <div
           ref={containerRef}
-          className="flex flex-row gap-8 animate-scroll-testimonials hover:[animation-play-state:paused]"
+          className="flex flex-row gap-8 animate-scroll-testimonials hover:[animation-play-state:paused] items-stretch"
           style={{ minWidth: 900 }}
         >
           {cards.map((t, idx) => (
             <div
               key={idx}
-              className="bg-white rounded-2xl p-6 shadow-md flex flex-col items-center h-full min-w-[320px]"
+              className="bg-white rounded-2xl p-6 shadow-md flex flex-col justify-between h-72 flex-shrink-0"
+              style={{
+                minWidth: "280px",
+                maxWidth: "420px",
+                width: "auto",
+              }}
             >
-              <p className="mb-4">{t.text}</p>
+              <p className="mb-4 text-sm leading-relaxed flex-grow">{t.text}</p>
               <div className="flex flex-row items-center gap-2 mt-4">
                 <img
                   src={t.img}
