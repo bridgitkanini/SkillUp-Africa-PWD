@@ -17,9 +17,19 @@ export const navLinks = [
       title: "Mentorship",
       link: "/mentorship",
     },
-    // {
-    //   id: 4,
-    //   title: "Jobs",
-    //   link: "/jobs",
-    // },
+    {
+      id: 4,
+      title: "Jobs",
+      link: "/",
+    },
+    {
+      id: 5,
+      title: "Log In",
+      link: "/",
+    },
+    {
+      id: 6,
+      title: "Sign Up",
+      link: "/",
+    },
   ];

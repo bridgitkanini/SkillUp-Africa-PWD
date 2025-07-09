@@ -21,44 +21,21 @@ function Navbar() {
           <p className="text-black font-bold text-2xl">SkillUP-Africa</p>
         </Link>
 
-        {pathname === "/" ? (
-          <div className="flex flex-row gap-8">
+        <nav className="hidden md:flex flex-row items-center gap-8 pr-8 text-base font-semibold">
+          {navLinks.map(({ id, title, link }) => (
             <Link
-              to={"/home"}
-              className="bg-primary text-white px-6 py-3 text-base font-semibold rounded-full hidden md:flex"
+              key={id}
+              to={link}
+              className={`${
+                link === pathname
+                  ? "text-primary font-bold"
+                  : "text-black font-medium"
+              } `}
             >
-              Home
+              {title}
             </Link>
-            <Link
-              to={"/"}
-              className="bg-primary text-white px-6 py-3 text-base font-semibold rounded-full hidden md:flex"
-            >
-              Sign up
-            </Link>
-            <Link
-              to={"/"}
-              className="bg-primary text-white px-6 py-3 text-base font-semibold rounded-full hidden md:flex"
-            >
-              Log in
-            </Link>
-          </div>
-        ) : (
-          <nav className="hidden md:flex flex-row items-center gap-8 pr-8 text-base font-semibold">
-            {navLinks.map(({ id, title, link }) => (
-              <Link
-                key={id}
-                to={link}
-                className={`${
-                  link === pathname
-                    ? "text-primary font-bold"
-                    : "text-black font-medium"
-                } `}
-              >
-                {title}
-              </Link>
-            ))}
-          </nav>
-        )}
+          ))}
+        </nav>
 
         {/* Hamburger menu for mobile screens */}
         <div className="flex-center md:hidden mr-3 px-1">
