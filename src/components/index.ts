@@ -19,17 +19,17 @@ export const navLinks = [
     },
     {
       id: 4,
-      title: "Jobs",
+      title: "Job Recommendations",
       link: "/",
     },
-    {
-      id: 5,
-      title: "Log In",
-      link: "/",
-    },
-    {
-      id: 6,
-      title: "Sign Up",
-      link: "/",
-    },
+    // {
+    //   id: 5,
+    //   title: "Log In",
+    //   link: "/",
+    // },
+    // {
+    //   id: 6,
+    //   title: "Sign Up",
+    //   link: "/",
+    // },
   ];
