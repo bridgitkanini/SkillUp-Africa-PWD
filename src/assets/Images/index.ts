@@ -13,3 +13,4 @@ export { default as plumbing } from "./plumbing.jpeg";
 export { default as pottery } from "./pottery.jpeg";
 export { default as tailoring } from "./tailoring.jpeg";
 export { default as CheckoutCard } from "./checkout-card-styling.svg";
+export { default as Mentorship } from "./mentee.svg";
