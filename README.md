@@ -1,73 +1,113 @@
-<h1 style="margin-top: 1em; text-align: center; margin-bottom: 3em;">
-  <p> <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" alt="Waving Hand" width="25px" height="25px">Welcome to the Skill-UP-Africa #Hack4PWD Project! </p>
-</h1>
+<div align="center">
+  <h1>🌟 Welcome to SkillUp Africa PWD Project 🌟</h1>
+  <p>Empowering persons with disabilities through accessible education and mentorship</p>
+  <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" alt="Waving Hand" width="25px" height="25px">
+</div>
 
+## 📋 Project Description
 
+SkillUp Africa PWD is a web application designed to provide accessible education and mentorship opportunities for persons with disabilities in Africa. The platform offers courses, mentorship programs, and resources tailored to different abilities.
 
-This Readme provides comprehensive information about the frontend repo.
+## 🚀 Features
 
+- **Landing Page**: Introduction to the platform and its mission
+- **Course Catalog**: Browse and access various courses
+- **Mentorship Program**: Connect with mentors in different fields
+- **Responsive Design**: Accessible across all devices
+- **Modern UI**: Built with Material-UI and Tailwind CSS for a polished look
 
+## 🛠 Tech Stack
 
+- **Frontend**: React 18 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: 
+  - Tailwind CSS for utility-first styling
+  - Material-UI (MUI) for React components
+  - Emotion for CSS-in-JS
+- **Routing**: React Router v6
+- **Package Manager**: pnpm
+- **Linting**: ESLint with React and TypeScript support
 
-## Project Description
+## 📁 Project Structure
 
-The website is built using the following tech stack:
+```
+src/
+├── assets/          # Static assets (images, icons, etc.)
+├── components/      # Reusable UI components
+├── pages/           # Page components
+│   ├── CoursePage/    # Course details and content
+│   ├── HomePage/      # Main dashboard
+│   ├── LandingPage/   # Welcome page
+│   └── MentorshipPage/# Mentorship program
+├── router/          # Application routing configuration
+├── App.tsx          # Root component
+└── main.tsx         # Application entry point
+```
 
-- **React**: JavaScript library for building user interfaces.
-- **Vite**: build tool that aims to provide a faster and leaner development experience for modern web projects.
-- **Tailwind CSS**: utility-first CSS framework for rapidly building custom user interfaces.
-- **GitHub**: platform for version control and collaboration.
-- **Figma**: web-based vector graphics editor and prototyping tool.
-
-Figma Design Reference: [Figma Design](https://www.figma.com/design/uuteWJTAgFY8d3ZO3ZUAsW/SkillUP-Africa?node-id=0-1&node-type=canvas&t=BPny5E650xPtHPIh-0)
-
-## Project Set Up
+## 🚀 Getting Started
 
 ### Prerequisites
 
-- `npm` and `pnpm` should be installed.
-- `git` should be installed (recommended v2.4.11 or higher)
+- Node.js (v16 or higher)
+- pnpm (v7 or higher) or npm
+- Git
 
-Follow these steps to get the project up and running on your local machine:
+### Installation
 
 1. **Clone the repository**
-
-   Open your terminal and run the following command:
-
    ```bash
-   git clone https://github.com/SkillUP-Africa-PWD-Org/frontend
+   git clone https://github.com/your-username/SkillUp-Africa-PWD.git
+   cd SkillUp-Africa-PWD
    ```
 
-2. **Navigate into the directory**
-
-   Change your current directory to the project's directory:
-
+2. **Install dependencies**
    ```bash
-   cd frontend
-   ```
-
-3. **Install the dependencies**
-
-   Run the following command:
-
-   ```bash
+   pnpm install
+   # or
    npm install
    ```
-   or
-   ```bash
-   pnpm i
-   ```
 
-5. **Start the development server**
-
-   Now you can start the development server and begin developing:
-
-   ```bash
-   npm run dev
-   ```
-   or
+3. **Start the development server**
    ```bash
    pnpm dev
+   # or
+   npm run dev
    ```
 
-   The project should now be running at http://localhost:5173 (or another port if 5173 is already in use).
+4. **Open in browser**
+   The application will be available at [http://localhost:5173](http://localhost:5173)
+
+## 🏗 Build for Production
+
+To create a production build:
+
+```bash
+pnpm build
+# or
+npm run build
+```
+
+The build artifacts will be stored in the `dist/` directory.
+
+## 🧪 Testing
+
+To run the linter:
+
+```bash
+pnpm lint
+# or
+npm run lint
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [Figma Design](https://www.figma.com/design/uuteWJTAgFY8d3ZO3ZUAsW/SkillUP-Africa?node-id=0-1&node-type=canvas&t=BPny5E650xPtHPIh-0)
+- All contributors who have helped shape this project
