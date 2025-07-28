@@ -47,9 +47,9 @@ const Hero = () => {
       {/* Overlay for better text readability */}
       <div className="absolute inset-0 backdrop-blur-sm"></div>
       
-      <div className="relative z-10 w-full max-w-7xl mx-auto">
+      <div className="relative z-10 w-full max-w-7xl mx-auto sm:mb-4 md:mb-60">
         <div 
-          className="flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-8 xl:gap-12 rounded-2xl p-6 sm:p-6 md:p-8 lg:p-10 xl:p-16 mb-2 sm:mb-4 md:mb-60 w-full mx-auto transition-colors duration-500 shadow-xl"
+          className="flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-8 xl:gap-12 rounded-2xl p-6 sm:p-6 md:p-8 lg:p-10 xl:p-16 w-full mx-auto transition-colors duration-500 shadow-xl"
           style={{ 
             backgroundColor: dataPoints[current].color,
             maxWidth: '1200px'
@@ -89,7 +89,7 @@ const Hero = () => {
               className={`transition-all duration-300 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white/50 ${
                 idx === current 
                   ? 'bg-[#4D2C5E] w-4 h-4 sm:w-5 sm:h-5' 
-                  : 'bg-white/50 hover:bg-white/70 w-3 h-3 sm:w-4 sm:h-4'
+                  : 'bg-[#4D2C5E]/30 hover:bg-[#4D2C5E]/50 w-3 h-3 sm:w-4 sm:h-4'
               }`}
               aria-label={`Go to slide ${idx + 1} - ${dataPoints[idx].title}`}
               aria-current={idx === current ? 'true' : 'false'}
