@@ -3,21 +3,21 @@ import logo from "../../public/skillup-africa-logo.svg";
 
 const Footer = () => {
   return (
-    <div className="bg-[#FDF8EE] overflow-hidden pt-10 pb-0 px-4 md:px-20">
+    <div className="bg-[#FDF8EE] overflow-hidden pt-8 sm:pt-10 pb-0 px-4 sm:px-6 md:px-12 lg:px-20">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-6 gap-10 items-start">
-          <div className="flex flex-col gap-4 md:col-span-2 w-full">
-            <div className="flex flex-row items-center gap-2 mb-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6 sm:gap-8 md:gap-10 items-start">
+          <div className="flex flex-col gap-3 sm:gap-4 lg:col-span-2 w-full">
+            <div className="flex flex-row items-center gap-2 mb-1 sm:mb-2">
               <img
                 src={logo}
                 alt="logo"
-                className="w-16 md:w-20 object-contain"
+                className="w-14 sm:w-16 md:w-20 object-contain"
               />
-              <h2 className="text-black font-bold text-lg md:text-xl">
+              <h2 className="text-black font-bold text-base sm:text-lg md:text-xl">
                 SkillUP-Africa
               </h2>
             </div>
-            <p className="text-sm text-justify w-full">
+            <p className="text-xs sm:text-sm text-justify w-full">
               SkillUp Africa is an innovative vocational training platform
               designed to empower people with disabilities (PWD) across the
               continent by providing accessible and inclusive education tailored
@@ -32,52 +32,46 @@ const Footer = () => {
               workforce.
             </p>
           </div>
-          <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-base md:text-lg mb-2">Company</h3>
-            <br />
-            <Link to="/about">About Us</Link>
-            <br />
-            <Link to="/how-it-works">How It Works</Link>
-            <br />
-            <Link to="/popular-courses">Popular Course</Link>
-            <br />
-            <Link to="/service">Service</Link>
+          <div className="flex flex-col gap-1 sm:gap-2">
+            <h3 className="font-bold text-sm sm:text-base md:text-lg mb-1 sm:mb-2">Company</h3>
+            <div className="flex flex-col gap-1 sm:gap-2">
+              <Link to="/about" className="text-xs sm:text-sm hover:underline">About Us</Link>
+              <Link to="/how-it-works" className="text-xs sm:text-sm hover:underline">How It Works</Link>
+              <Link to="/popular-courses" className="text-xs sm:text-sm hover:underline">Popular Course</Link>
+              <Link to="/service" className="text-xs sm:text-sm hover:underline">Service</Link>
+            </div>
           </div>
-          <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-base md:text-lg mb-2">Courses</h3>
-            <br />
-            <Link to="/categories">Categories</Link>
-            <br />
-            <Link to="/video-course">Video Course</Link>
-            <br />
-            <Link to="/online-course">Online Course</Link>
+          <div className="flex flex-col gap-1 sm:gap-2">
+            <h3 className="font-bold text-sm sm:text-base md:text-lg mb-1 sm:mb-2">Courses</h3>
+            <div className="flex flex-col gap-1 sm:gap-2">
+              <Link to="/categories" className="text-xs sm:text-sm hover:underline">Categories</Link>
+              <Link to="/video-course" className="text-xs sm:text-sm hover:underline">Video Course</Link>
+              <Link to="/online-course" className="text-xs sm:text-sm hover:underline">Online Course</Link>
+            </div>
           </div>
-          <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-base md:text-lg mb-2">Support</h3>
-            <br />
-            <Link to="/faq">FAQ</Link>
-            <br />
-            <Link to="/help-center">Help Center</Link>
-            <br />
-            <Link to="/career">Career</Link>
-            <br />
-            <Link to="/privacy">Privacy</Link>
+          <div className="flex flex-col gap-1 sm:gap-2">
+            <h3 className="font-bold text-sm sm:text-base md:text-lg mb-1 sm:mb-2">Support</h3>
+            <div className="flex flex-col gap-1 sm:gap-2">
+              <Link to="/faq" className="text-xs sm:text-sm hover:underline">FAQ</Link>
+              <Link to="/help-center" className="text-xs sm:text-sm hover:underline">Help Center</Link>
+              <Link to="/career" className="text-xs sm:text-sm hover:underline">Career</Link>
+              <Link to="/privacy" className="text-xs sm:text-sm hover:underline">Privacy</Link>
+            </div>
           </div>
-          <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-base md:text-lg mb-2">
+          <div className="flex flex-col gap-1 sm:gap-2">
+            <h3 className="font-bold text-sm sm:text-base md:text-lg mb-1 sm:mb-2">
               Contact Info
             </h3>
-            <br />
-            <p>+254 700 123456</p>
-            <br />
-            <p>skillupafrica@gmail.com</p>
-            <br />
-            <p>The Piano, Brookside Drive, Lower Kabete, Nairobi, Kenya</p>
+            <div className="flex flex-col gap-1 sm:gap-2">
+              <p className="text-xs sm:text-sm">+254 700 123456</p>
+              <p className="text-xs sm:text-sm break-words">skillupafrica@gmail.com</p>
+              <p className="text-xs sm:text-sm">The Piano, Brookside Drive,<br />Lower Kabete, Nairobi, Kenya</p>
+            </div>
           </div>
         </div>
-        <div className="border-t border-gray-300 mt-10 mb-0"></div>
-        <div className="text-center text-xs text-gray-600 py-4">
-          SkillUP-Africa All Right Reserved, 2024
+        <div className="border-t border-gray-300 mt-6 sm:mt-8 md:mt-10 mb-0"></div>
+        <div className="text-center text-[10px] xs:text-xs text-gray-600 py-3 sm:py-4">
+          © {new Date().getFullYear()} SkillUP-Africa. All Rights Reserved.
         </div>
       </div>
     </div>

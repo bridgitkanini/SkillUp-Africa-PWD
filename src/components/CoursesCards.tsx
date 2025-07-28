@@ -81,40 +81,47 @@ const CoursesCards = () => {
   ];
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 p-10 md:p-40 w-screen items-center justify-center gap-10 md:gap-20">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-4 sm:px-6 lg:px-8 py-10 sm:py-14 lg:py-20 w-full max-w-7xl mx-auto items-center justify-center gap-6 sm:gap-8 lg:gap-10">
       {CoursesData.map((course) => (
         <div
           key={course.id}
-          className="max-w-80 rounded-2xl p-4"
+          className="w-full h-full rounded-2xl p-4 sm:p-5 hover:shadow-lg transition-shadow duration-300"
           style={{
             backgroundColor: course.backgroundColor,
             color: course.textColor,
+            minHeight: '420px',
+            display: 'flex',
+            flexDirection: 'column',
           }}
         >
-          <div className="flex flex-col gap-4">
-            <img
-              src={course.lessonimage}
-              alt="lesson-image"
-              className="rounded-2xl max-h-60 object-cover"
-            />
-            <div>
-              <p className="text-sm font-light">{course.subtitle}</p>
-              <p className="text-lg font-semibold">{course.title}</p>
-              <p>{course.description}</p>
+          <div className="flex flex-col gap-3 sm:gap-4 h-full">
+            <div className="relative w-full h-40 sm:h-48 md:h-52 lg:h-56 overflow-hidden rounded-2xl">
+              <img
+                src={course.lessonimage}
+                alt={course.title}
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
             </div>
-            <div className="flex gap-4">
-              <span className="flex gap-2 items-center justify-center">
-                <AccessTimeIcon />
-                {course.duration}
-              </span>
-              <span className="flex gap-2 items-center justify-center">
-                <AutoStoriesIcon />
-                {course.lessons} Lessons
-              </span>
+            <div className="flex-1 flex flex-col">
+              <div className="mb-2 sm:mb-3">
+                <p className="text-xs sm:text-sm font-light opacity-80">{course.subtitle}</p>
+                <h3 className="text-lg sm:text-xl font-semibold mt-1">{course.title}</h3>
+                <p className="text-sm sm:text-base opacity-90 mt-1">{course.description}</p>
+              </div>
+              <div className="flex flex-wrap gap-3 sm:gap-4 mt-auto pt-2">
+                <span className="flex items-center gap-1.5 text-xs sm:text-sm">
+                  <AccessTimeIcon className="text-sm sm:text-base" />
+                  {course.duration}
+                </span>
+                <span className="flex items-center gap-1.5 text-xs sm:text-sm">
+                  <AutoStoriesIcon className="text-sm sm:text-base" />
+                  {course.lessons} Lessons
+                </span>
+              </div>
             </div>
             <Link
               to={`/courses/${course.id}`}
-              className="flex self-center py-2 px-4 -mb-8 bg-primary rounded-full text-white "
+              className="mt-auto self-center py-2.5 px-6 sm:px-8 bg-primary hover:bg-primary/90 rounded-full text-white text-sm sm:text-base font-medium transition-colors duration-200 w-max"
             >
               Join Course
             </Link>

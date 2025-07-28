@@ -26,52 +26,70 @@ const Testimonials = () => {
   const cards = [...testimonials, ...testimonials];
   const containerRef = useRef(null);
   return (
-    <div className="flex flex-col gap-4 items-center justify-center py-20">
-      <header className="text-7xl font-bold text-gray-800">
-        What Students Say
-      </header>
-      <div className="w-full overflow-x-hidden mt-8" style={{ maxWidth: 1200 }}>
-        <div
-          ref={containerRef}
-          className="flex flex-row gap-8 animate-scroll-testimonials hover:[animation-play-state:paused] items-stretch"
-          style={{ minWidth: 900 }}
-        >
-          {cards.map((t, idx) => (
-            <div
-              key={idx}
-              className="bg-white rounded-2xl p-6 shadow-md flex flex-col justify-between h-72 flex-shrink-0"
-              style={{
-                minWidth: "280px",
-                maxWidth: "420px",
-                width: "auto",
-              }}
-            >
-              <p className="mb-4 text-sm leading-relaxed flex-grow">{t.text}</p>
-              <div className="flex flex-row items-center gap-2 mt-4">
-                <img
-                  src={t.img}
-                  alt={t.name}
-                  className="w-10 h-10 rounded-full"
-                />
-                <div>
-                  <div className="font-bold">{t.name}</div>
-                  <div className="text-xs text-gray-500">{t.title}</div>
+    <section className="w-full py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <div className="max-w-7xl mx-auto">
+        <header className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-center text-gray-800 mb-8 sm:mb-12 md:mb-16">
+          What Students Say
+        </header>
+        
+        <div className="relative w-full overflow-hidden">
+          <div 
+            ref={containerRef}
+            className="flex gap-4 md:gap-6 lg:gap-8 py-4 animate-scroll-testimonials hover:[animation-play-state:paused]"
+          >
+            {cards.map((t, idx) => (
+              <div
+                key={idx}
+                className="bg-white rounded-2xl p-6 shadow-md flex flex-col justify-between flex-shrink-0 h-auto min-h-[280px] sm:min-h-[320px]"
+                style={{
+                  width: 'calc(100vw - 4rem)',
+                  maxWidth: '420px',
+                  scrollSnapAlign: 'center',
+                }}
+              >
+                <p className="mb-4 text-sm sm:text-base leading-relaxed text-gray-700 flex-grow">
+                  {t.text}
+                </p>
+                <div className="flex items-center gap-3 mt-4 pt-4 border-t border-gray-100">
+                  <img
+                    src={t.img}
+                    alt={t.name}
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex-shrink-0"
+                    loading="lazy"
+                  />
+                  <div>
+                    <div className="font-semibold text-gray-900">{t.name}</div>
+                    <div className="text-xs sm:text-sm text-gray-500">{t.title}</div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
+      
       <style>{`
         @keyframes scroll-testimonials {
           0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+          100% { transform: translateX(calc(-50% - 1rem)); }
         }
         .animate-scroll-testimonials {
-          animation: scroll-testimonials 24s linear infinite;
+          display: flex;
+          width: max-content;
+          animation: scroll-testimonials 30s linear infinite;
+        }
+        @media (min-width: 640px) {
+          .animate-scroll-testimonials {
+            animation-duration: 40s;
+          }
+        }
+        @media (min-width: 1024px) {
+          .animate-scroll-testimonials {
+            animation-duration: 50s;
+          }
         }
       `}</style>
-    </div>
+    </section>
   );
 };
 

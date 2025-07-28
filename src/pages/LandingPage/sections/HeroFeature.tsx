@@ -2,56 +2,58 @@ import learnIcon from "../../../assets/Icons/learn-icon.svg";
 import careerIcon from "../../../assets/Icons/career-icon.svg";
 import certificateIcon from "../../../assets/Icons/certificate-icon.svg";
 
+const features = [
+  {
+    icon: learnIcon,
+    title: "Learn The Latest Skills",
+    description:
+      "Our platform offers valuable skills like plumbing, mechanical work, electrical work and many others to help PWDs excel in their area of work.",
+  },
+  {
+    icon: careerIcon,
+    title: "Get Ready For a Career",
+    description:
+      "Preparing for a career as a person with a disability involves exploring your interests, developing relevant skills, and networking with professionals in your field.",
+  },
+  {
+    icon: certificateIcon,
+    title: "Earn a Certificate",
+    description:
+      "Earning a certificate can enhance your skills and career opportunities, so choose a program that aligns with your interests. Completing the program demonstrates your commitment and showcases your abilities to potential employers.",
+  },
+];
+
 const HeroFeature = () => {
   return (
-    <div>
-      <div className="flex flex-col md:flex-row gap-4 p-16 m-20 -mt-28 bg-primary rounded-2xl text-white relative z-10">
-        <div className="flex flex-row items-center justify-center gap-4">
-          <img
-            src={learnIcon}
-            alt="learn-icon"
-            className="w-16 h-16 p-4 bg-white/30 rounded-xl"
-          />
-          <div className="flex flex-col gap-2">
-            <h2 className="text-xl font-semibold">Learn The Latest Skills</h2>
-            <p className="text-sm font-extralight">
-              Our platform offers valuable skills like plumbing, mechanical
-              work, electrical work and many others to help PWDs excel in their
-              area of work.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex flex-row items-center justify-center gap-4">
-          <img
-            src={careerIcon}
-            alt="career-icon"
-            className="w-16 h-16 p-4 bg-white/30 rounded-xl"
-          />
-          <div className="flex flex-col gap-2">
-            <h2 className="text-xl font-semibold">Get Ready For a Career</h2>
-            <p className="text-sm font-extralight">
-              Preparing for a career as a person with a disability involves
-              exploring your interests, developing relevant skills, and
-              networking with professionals in your field.
-            </p>
-          </div>
-        </div>
-
-        <div className="flex flex-row items-center justify-center gap-4 max-w-96">
-          <img
-            src={certificateIcon}
-            alt="certificate-icon"
-            className="w-16 h-16 p-4 bg-white/30 rounded-xl"
-          />
-          <div className="flex flex-col gap-2">
-            <h2 className="text-xl font-semibold">Earn a Certificate</h2>
-            <p className="text-sm font-extralight">
-              Earning a certificate can enhance your skills and career
-              opportunities, so choose a program that aligns with your
-              interests. Completing the program demonstrates your commitment and
-              showcases your abilities to potential employers.
-            </p>
+    <div className="px-4 sm:px-6 lg:px-8 mt-8 md:-mt-40 relative z-10">
+      <div className="max-w-7xl mx-auto">
+        <div className="bg-primary rounded-2xl shadow-xl overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 md:p-8 lg:p-10">
+            {features.map((feature, index) => (
+              <div 
+                key={index} 
+                className="backdrop-blur-sm rounded-xl p-6 transition-all duration-300"
+              >
+                <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row gap-4 items-start">
+                  <div className="flex-shrink-0 bg-white/30 p-3 rounded-xl">
+                    <img 
+                      src={feature.icon} 
+                      alt="" 
+                      className="w-12 h-12 md:w-14 md:h-14 object-contain"
+                      aria-hidden="true"
+                    />
+                  </div>
+                  <div className="flex-1">
+                    <h2 className="text-base sm:text-lg font-semibold text-white mb-2">
+                      {feature.title}
+                    </h2>
+                    <p className="text-white/90 text-xs sm:text-xs leading-relaxed">
+                      {feature.description}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -35,45 +35,69 @@ const Hero = () => {
   }, []);
 
   return (
-    <div
-      className="relative py-10"
+    <section 
+      className="relative w-full min-h-screen flex flex-col items-center justify-center py-10 px-4 sm:px-6 lg:px-8 overflow-hidden"
       style={{
         backgroundImage: `url(${HeroBackground})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        minHeight: "100vh",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
       }}
     >
-      <div
-        className="flex flex-col md:flex-row items-center justify-center gap-4 rounded-2xl max-w-[1000px] m-auto p-8 md:p-20 relative z-10 transition-colors duration-500"
-        style={{ background: dataPoints[current].color }}
-      >
-        <img
-          src={Hero1}
-          alt="carousel-image1"
-          className="object-cover p-6 md:p-10 min-h-80 rounded-2xl bg-white"
-        />
-        <div className="text-white flex flex-col gap-4 p-6 md:p-10">
-          <h3 className="text-3xl md:text-5xl font-bold">
-            {dataPoints[current].title}
-          </h3>
-          <p className="w-72 md:w-80">{dataPoints[current].text}</p>
+      {/* Overlay for better text readability */}
+      <div className="absolute inset-0 backdrop-blur-sm"></div>
+      
+      <div className="relative z-10 w-full max-w-7xl mx-auto">
+        <div 
+          className="flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-8 xl:gap-12 rounded-2xl p-6 sm:p-6 md:p-8 lg:p-10 xl:p-16 mb-2 sm:mb-4 md:mb-60 w-full mx-auto transition-colors duration-500 shadow-xl"
+          style={{ 
+            backgroundColor: dataPoints[current].color,
+            maxWidth: '1200px'
+          }}
+        >
+          {/* Image Container */}
+          <div className="w-full lg:w-1/2 flex-shrink-0">
+            <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[400px] xl:h-[450px] bg-white rounded-xl overflow-hidden shadow-lg">
+              <img
+                src={Hero1}
+                alt="Illustration showing skills development"
+                className="w-full h-full object-contain p-4 md:p-6 lg:p-8"
+                loading="eager"
+              />
+            </div>
+          </div>
+          
+          {/* Content */}
+          <div className="w-full lg:w-1/2 text-white">
+            <div className="flex flex-col gap-3 sm:gap-4 md:gap-5 lg:gap-6">
+              <h3 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                {dataPoints[current].title}
+              </h3>
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl font-medium max-w-xl">
+                {dataPoints[current].text}
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        {/* Carousel Navigation Dots */}
+        <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 mt-6 px-4">
+          {dataPoints.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrent(idx)}
+              className={`transition-all duration-300 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white/50 ${
+                idx === current 
+                  ? 'bg-[#4D2C5E] w-4 h-4 sm:w-5 sm:h-5' 
+                  : 'bg-white/50 hover:bg-white/70 w-3 h-3 sm:w-4 sm:h-4'
+              }`}
+              aria-label={`Go to slide ${idx + 1} - ${dataPoints[idx].title}`}
+              aria-current={idx === current ? 'true' : 'false'}
+            />
+          ))}
         </div>
       </div>
-      {/* Carousel dots */}
-      <div className="flex flex-row gap-2 justify-center items-center mt-6 mb-8">
-        {dataPoints.map((_, idx) => (
-          <button
-            key={idx}
-            onClick={() => setCurrent(idx)}
-            className={`w-3 h-3 rounded-full transition-all duration-300 ${
-              idx === current ? "bg-[#4D2C5E] w-5" : "bg-gray-300"
-            }`}
-            aria-label={`Go to slide ${idx + 1}`}
-          />
-        ))}
-      </div>
-    </div>
+    </section>
   );
 };
 
