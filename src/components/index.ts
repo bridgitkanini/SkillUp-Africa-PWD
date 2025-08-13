@@ -4,13 +4,13 @@ export { default as Navbar } from './Navbar';
 export const navLinks = [
     {
       id: 1,
-      title: "",
+      title: "Home",
       link: "/",
     },
     {
       id: 2,
-      title: "Home",
-      link: "/home",
+      title: "Courses",
+      link: "/courses",
     },
     {
       id: 3,
@@ -20,7 +20,7 @@ export const navLinks = [
     {
       id: 4,
       title: "Job Recommendations",
-      link: "/",
+      link: "/jobs",
     },
     // {
     //   id: 5,

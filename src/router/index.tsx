@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import { HomePage, LandingPage, CoursePage, Layout, MentorshipPage } from "../pages";
+import JobRecommendationsPage from "../pages/JobRecommendationsPage";
 
 const router = createBrowserRouter([
   {
@@ -11,7 +12,7 @@ const router = createBrowserRouter([
         element: <LandingPage />,
       },
       {
-        path: "/home",
+        path: "/courses",
         element: <HomePage />,
       },
       {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       { 
         path: "/courses/:id", 
         element: <CoursePage /> 
+      },
+      {
+        path: "/jobs",
+        element: <JobRecommendationsPage />
       },
     ],
   },

@@ -1,47 +1,82 @@
 <div align="center">
   <h1>🌟 Welcome to SkillUp Africa PWD Project 🌟</h1>
-  <p>Empowering persons with disabilities through accessible education and mentorship</p>
+  <p>Empowering persons with disabilities through accessible vocational training, mentorship and job opportunities</p>
   <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" alt="Waving Hand" width="25px" height="25px">
 </div>
 
 ## 📋 Project Description
 
-SkillUp Africa PWD is a web application designed to provide accessible education and mentorship opportunities for persons with disabilities in Africa. The platform offers courses, mentorship programs, and resources tailored to different abilities.
+SkillUp Africa PWD is a comprehensive platform designed to provide accessible vocational training, mentorship, and job opportunities for persons with disabilities across Africa. The platform bridges the gap between skilled individuals and employment opportunities in various trades.
 
-## 🚀 Features
+## 🚀 Key Features
 
-- **Landing Page**: Introduction to the platform and its mission
-- **Course Catalog**: Browse and access various courses
-- **Mentorship Program**: Connect with mentors in different fields
-- **Responsive Design**: Accessible across all devices
-- **Modern UI**: Built with Material-UI and Tailwind CSS for a polished look
+- **Vocational Courses**: Hands-on training in various trades
+  - Electrical Works
+  - Automotive Mechanics
+  - Pottery & Ceramics
+  - Plumbing
+  - Jewelry Making
+  - Tailoring & Fashion Design
+
+- **Job Recommendations**: Personalized job matching based on skills
+- **Mentorship Program**: Connect with industry professionals
+- **Responsive Design**: Fully accessible on all devices
+- **Interactive Learning**: Engaging course materials and resources
 
 ## 🛠 Tech Stack
 
-- **Frontend**: React 18 with TypeScript
-- **Build Tool**: Vite
-- **Styling**: 
+- **Frontend**: 
+  - React 18 with TypeScript
+  - Vite for fast development and building
+  - React Router v6 for navigation
+
+- **UI/UX**:
   - Tailwind CSS for utility-first styling
-  - Material-UI (MUI) for React components
-  - Emotion for CSS-in-JS
-- **Routing**: React Router v6
-- **Package Manager**: pnpm
-- **Linting**: ESLint with React and TypeScript support
+  - Material-UI (MUI) components
+  - Framer Motion for animations
+  - React Icons for iconography
+
+- **State Management**:
+  - React Context API
+  - React Query for server state
+
+- **Development Tools**:
+  - ESLint + Prettier for code quality
+  - TypeScript for type safety
+  - pnpm for package management
+  - Git for version control
 
 ## 📁 Project Structure
 
 ```
 src/
-├── assets/          # Static assets (images, icons, etc.)
-├── components/      # Reusable UI components
-├── pages/           # Page components
-│   ├── CoursePage/    # Course details and content
-│   ├── HomePage/      # Main dashboard
-│   ├── LandingPage/   # Welcome page
-│   └── MentorshipPage/# Mentorship program
-├── router/          # Application routing configuration
-├── App.tsx          # Root component
-└── main.tsx         # Application entry point
+├── assets/                 # Static assets
+│   ├── Icons/             # SVG icons and illustrations
+│   └── Images/            # Image assets
+│
+├── components/            # Reusable UI components
+│   ├── CoursesCards/      # Course listing components
+│   ├── Navbar/           # Navigation components
+│   ├── Footer/           # Footer components
+│   └── common/           # Shared UI components
+│
+├── pages/                 # Page components
+│   ├── CoursePage/       # Course details and lessons
+│   │   └── sections/     # Course-specific sections
+│   │
+│   ├── HomePage/         # Main dashboard
+│   │   └── sections/     # Dashboard sections
+│   │
+│   ├── JobRecommendationsPage/  # Job listings
+│   ├── LandingPage/      # Welcome and about pages
+│   │   └── sections/     # Landing page sections
+│   │
+│   └── MentorshipPage/   # Mentorship program
+│       └── sections/     # Mentorship sections
+│
+├── router/               # Application routes
+├── App.tsx               # Root component
+└── main.tsx              # Application entry point
 ```
 
 ## 🚀 Getting Started
